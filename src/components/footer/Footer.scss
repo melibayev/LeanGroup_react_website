@@ -1,0 +1,109 @@
+footer {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    background-color: rgba(0, 16, 61, 0.06);
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(145, 147, 153, 1);
+    padding-bottom: 12px;
+    &__right {
+        display: flex;
+        column-gap: 12px;
+        align-items: flex-end;
+    }
+}
+
+.footer_middle {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 24px;
+    &__left {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: flex-start;
+    }
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        row-gap: 24px;
+    }
+}
+
+.footer__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: rgba(44, 45, 46, 1);
+    }
+    a {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(44, 45, 46, 1);
+        transition: .5s;
+        &:hover {
+            color: rgba(239, 124, 0, 1);
+        }
+    }
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(239, 124, 0, 1);
+    }
+    p {
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(44, 45, 46, 1);
+    }
+}
+
+.footer_bottom {
+    p {
+        max-width: 336px;
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(145, 147, 153, 1);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .footer_middle {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .footer_middle {
+        &__left {
+            margin-left: 4%;
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+        }
+        &__right {
+            margin-left: 4%;
+            grid-template-columns: 1fr;
+        }
+    }
+    .footer_bottom {
+        p {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}
